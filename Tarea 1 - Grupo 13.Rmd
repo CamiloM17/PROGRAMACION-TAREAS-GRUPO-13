@@ -1,6 +1,6 @@
 ---
 title: "Tarea 1"
-output: html_document
+output: md_document
 ---
 ## **Integrantes**
 - BARRRENECHEA BENITES, Marycielo Corazon
@@ -75,6 +75,11 @@ which(nota>7)
 ```{r}
 notasordenadas<-order(nota,na.last=TRUE,decreasing=TRUE)
 nota[notasordenadas]
+```
+
+OTRA MANERA:
+
+```{r}
 rev(sort(nota))
 ```
 
@@ -150,6 +155,12 @@ quantile(soloC$nota, 66/100)
 
 **7.** Un alumno tiene una nota de 4.9. ¿Qué porcentaje, del total de alumnos, tiene una nota menor o igual que la suya? ¿Y qué porcentaje tiene una nota mayor o igual que la suya?
 
+MENOR:
+```{r}
+length(nota[nota<=4.9])/length(nota)*100
+```
+
+MAYOR:
 ```{r}
 length(nota[nota>=4.9])/length(nota)*100
 ```
