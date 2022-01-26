@@ -1,9 +1,14 @@
+Tarea 2
+================
+
 # **TAREA 2**
 
-Integrantes
+**Integrantes**
 
 -   BARRRENECHEA BENITES, Marycielo Corazon
+
 -   BECERRA ZEVALLOS, Cesar Gerardo
+
 -   MUÑOZ RIMACHI, Camilo Patricio
 
 ## **EJERCICIOS**
@@ -11,28 +16,36 @@ Integrantes
 **1.** ¿Qué cantidad de dinero sobra al repartir 10000$ entre 3
 personas?
 
-    10000%%3
+``` r
+10000%%3
+```
 
     ## [1] 1
 
 **2.** ¿Es el número 4560 divisible por 3?
 
-    4560%%3==0
+``` r
+4560%%3==0
+```
 
     ## [1] TRUE
 
 **3.** Construya un vector con los números enteros del 2 al 87. ¿Cuáles
 de esos números son divisibles por 7?
 
-    c(2:87)
+``` r
+c(2:87)
+```
 
     ##  [1]  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
     ## [26] 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51
     ## [51] 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76
     ## [76] 77 78 79 80 81 82 83 84 85 86 87
 
-    v3<-c(2:87)
-    v3[v3%%7==0]
+``` r
+v3<-c(2:87)
+v3[v3%%7==0]
+```
 
     ##  [1]  7 14 21 28 35 42 49 56 63 70 77 84
 
@@ -46,19 +59,23 @@ divisibles por 5.
 
 -   **c.** ¿En cuál de las 5 posiciones se cumple A y B simultáneamente?
 
-<!-- -->
-
-    c(7:3)
+``` r
+c(7:3)
+```
 
     ## [1] 7 6 5 4 3
 
-    v4a=c(7:3)
-    c(seq(5,25,5))
+``` r
+v4a=c(7:3)
+c(seq(5,25,5))
+```
 
     ## [1]  5 10 15 20 25
 
-    v4b=c(seq(5,25,5))
-    which((v4a%%2==0)&(v4b>10))
+``` r
+v4b=c(seq(5,25,5))
+which((v4a%%2==0)&(v4b>10))
+```
 
     ## [1] 4
 
@@ -69,7 +86,9 @@ resultado de la suma solicitada por el profesor del niño Gauss.
 
 SUMA SIMPLE:
 
-    seq(1:100)
+``` r
+seq(1:100)
+```
 
     ##   [1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18
     ##  [19]  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36
@@ -78,16 +97,20 @@ SUMA SIMPLE:
     ##  [73]  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90
     ##  [91]  91  92  93  94  95  96  97  98  99 100
 
-    sum(seq(1:100))
+``` r
+sum(seq(1:100))
+```
 
     ## [1] 5050
 
 FÓRMULA DE GAUSS:
 
-    Gauss<-function(x){
-      (x*(x+1))/2
-    }
-    Gauss(100)
+``` r
+Gauss<-function(x){
+  (x*(x+1))/2
+}
+Gauss(100)
+```
 
     ## [1] 5050
 
@@ -95,18 +118,24 @@ FÓRMULA DE GAUSS:
 -4. Escriba un procedimiento para extraer las posiciones donde está el
 valor mínimo en el vector.
 
-    V <- c(1,-4,5,9,-4)
-    which(V==min(V),)
+``` r
+V <- c(1,-4,5,9,-4)
+which(V==min(V),)
+```
 
     ## [1] 2 5
 
 **7.** Calcular 8!
 
-    factorial(8)
+``` r
+factorial(8)
+```
 
     ## [1] 40320
 
-    prod(1:8)
+``` r
+prod(1:8)
+```
 
     ## [1] 40320
 
@@ -114,20 +143,24 @@ valor mínimo en el vector.
 
 MÉTODO 1:
 
-    argumentosum<-function(x){
-      exp(x)
-    }
-    sum(argumentosum(3:7))
+``` r
+argumentosum<-function(x){
+  exp(x)
+}
+sum(argumentosum(3:7))
+```
 
     ## [1] 1723.159
 
 MÉTODO 2:
 
-    resultado8=vector()
-    for(i in 3:7){
-      resultado8=c(resultado8, exp(i))
-    }
-    sum(resultado8)
+``` r
+resultado8=vector()
+for(i in 3:7){
+  resultado8=c(resultado8, exp(i))
+}
+sum(resultado8)
+```
 
     ## [1] 1723.159
 
@@ -135,29 +168,35 @@ MÉTODO 2:
 
 MÉTODO 1:
 
-    argumentoprod<-function(x){
-      log10(sqrt(x))
-    }
-    prod(argumentoprod(1:10))
+``` r
+argumentoprod<-function(x){
+  log10(sqrt(x))
+}
+prod(argumentoprod(1:10))
+```
 
     ## [1] 0
 
 MÉTODO 2:
 
-    resultado9=vector()
-    for(i in 1:10){
-      resultado9=c(resultado9, 1/2*log(i))
-    }
-    prod(resultado9)
+``` r
+resultado9=vector()
+for(i in 1:10){
+  resultado9=c(resultado9, 1/2*log(i))
+}
+prod(resultado9)
+```
 
     ## [1] 0
 
 **10.** Realizar una función que permita calcular el área de una corona
 circular.
 
-    areacorona<-function(R,s,c,d){
-      0.5*(R*s-c*d)
-    }
+``` r
+areacorona<-function(R,s,c,d){
+  0.5*(R*s-c*d)
+}
+```
 
 EJEMPLO:
 
@@ -169,9 +208,9 @@ EJEMPLO:
 
 -   distancia a la cuerda (radio - flecha) = 1
 
-<!-- -->
-
-    areacorona(8,4,3,1)
+``` r
+areacorona(8,4,3,1)
+```
 
     ## [1] 14.5
 
@@ -181,25 +220,31 @@ sucesivamente. Compare su resultado con el de la función rev.
 
 VECTOR NUMÉRICO:
 
-    v11<-c(4,6,12,35,29,17,58)
-    v11_inv<-c(58,17,29,35,12,6,4)
-    rev(v11)
+``` r
+v11<-c(4,6,12,35,29,17,58)
+v11_inv<-c(58,17,29,35,12,6,4)
+rev(v11)
+```
 
     ## [1] 58 17 29 35 12  6  4
 
 VECTOR DE CARACTERES:
 
-    v11.2<-c("a","b","c","d") 
-    v11.2_inv<-c("d","c","b","a")
-    rev(v11.2)
+``` r
+v11.2<-c("a","b","c","d") 
+v11.2_inv<-c("d","c","b","a")
+rev(v11.2)
+```
 
     ## [1] "d" "c" "b" "a"
 
 VECTOR LÓGICO:
 
-    v11.3<-c(TRUE,FALSE,TRUE,FALSE,FALSE) 
-    v11.3_inv<-c(FALSE,FALSE,TRUE,FALSE,TRUE)
-    rev(v11.3)
+``` r
+v11.3<-c(TRUE,FALSE,TRUE,FALSE,FALSE) 
+v11.3_inv<-c(FALSE,FALSE,TRUE,FALSE,TRUE)
+rev(v11.3)
+```
 
     ## [1] FALSE FALSE  TRUE FALSE  TRUE
 
@@ -207,20 +252,24 @@ VECTOR LÓGICO:
 
 MÉTODO 1:
 
-    argumentosum2<-function(x){
-      x^(3)+4*x^(2)
-    }
-    sum(argumentosum2(10:100))
+``` r
+argumentosum2<-function(x){
+  x^(3)+4*x^(2)
+}
+sum(argumentosum2(10:100))
+```
 
     ## [1] 26852735
 
 MÉTODO 2:
 
-    resultado12=vector()
-    for(i in 10:100){
-      resultado12=c(resultado12, (i^3)+(4*i^2))
-    }
-    sum(resultado12)
+``` r
+resultado12=vector()
+for(i in 10:100){
+  resultado12=c(resultado12, (i^3)+(4*i^2))
+}
+sum(resultado12)
+```
 
     ## [1] 26852735
 
@@ -228,27 +277,33 @@ MÉTODO 2:
 
 MÉTODO 1:
 
-    argumentosum3<-function(x){
-      (2^(x)/x)+(3^(x)/x^(2))
-    }
-    sum(argumentosum3(1:25))
+``` r
+argumentosum3<-function(x){
+  (2^(x)/x)+(3^(x)/x^(2))
+}
+sum(argumentosum3(1:25))
+```
 
     ## [1] 2129170437
 
 MÉTODO 2:
 
-    resultado13=vector()
-    for(i in 1:25){
-      resultado13=c(resultado13,((2^i)/i)+((3^i)/(i^2)))
-    }
-    sum(resultado13)
+``` r
+resultado13=vector()
+for(i in 1:25){
+  resultado13=c(resultado13,((2^i)/i)+((3^i)/(i^2)))
+}
+sum(resultado13)
+```
 
     ## [1] 2129170437
 
 **14.** Lea el siguiente archivo
 
-    paises<-read.table("https://raw.githubusercontent.com/fhernanb/datos/master/Paises.txt",header=TRUE)
-    paises
+``` r
+paises<-read.table("https://raw.githubusercontent.com/fhernanb/datos/master/Paises.txt",header=TRUE)
+paises
+```
 
     ##                 Pais poblacion alfabetizacion tasamortinf   PIB
     ## 1         Acerbaján_      7400             98        35.0  3000
@@ -361,33 +416,45 @@ MÉTODO 2:
 
 **a.** Calcular el número de variables del dataset
 
-    length(paises)
+``` r
+length(paises)
+```
 
     ## [1] 5
 
 **b.** ¿Cuántos países hay en el dataset?
 
-    length(paises$Pais)
+``` r
+length(paises$Pais)
+```
 
     ## [1] 107
 
 **c.** ¿Cuál es el país con mayor población?
 
-    paises$Pais[paises$poblacion==max(paises$poblacion)]
+``` r
+paises$Pais[paises$poblacion==max(paises$poblacion)]
+```
 
     ## [1] "China_"
 
-    paises$Pais[match(max(paises$poblacion),paises$poblacion)]
+``` r
+paises$Pais[match(max(paises$poblacion),paises$poblacion)]
+```
 
     ## [1] "China_"
 
 **d.** ¿Cuál es el país con alfabetización más baja?
 
-    paises$Pais[paises$alfabetizacion==min(paises$alfabetizacion)]
+``` r
+paises$Pais[paises$alfabetizacion==min(paises$alfabetizacion)]
+```
 
     ## [1] "Burkina_Faso"
 
-    paises$Pais[match(min(paises$alfabetizacion),paises$alfabetizacion)]
+``` r
+paises$Pais[match(min(paises$alfabetizacion),paises$alfabetizacion)]
+```
 
     ## [1] "Burkina_Faso"
 
@@ -397,7 +464,9 @@ usted puede escribir en la consola ?mtcars o también help(mtcars). De la
 base mtcars obtenga bases de datos que cumplan las siguientes
 condiciones.
 
-    mtcars
+``` r
+mtcars
+```
 
     ##                      mpg cyl  disp  hp drat    wt  qsec vs am gear carb
     ## Mazda RX4           21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
@@ -436,7 +505,9 @@ condiciones.
 **a.** Autos que tengan un rendimiento menor a 18 millas por galón de
 combustible.
 
-    mtcars[(mtcars$mpg<18),]
+``` r
+mtcars[(mtcars$mpg<18),]
+```
 
     ##                      mpg cyl  disp  hp drat    wt  qsec vs am gear carb
     ## Duster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
@@ -453,8 +524,10 @@ combustible.
     ## Ford Pantera L      15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4
     ## Maserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8
 
-    v15a=mtcars[(mtcars$mpg<18),]
-    row.names(v15a)
+``` r
+v15a=mtcars[(mtcars$mpg<18),]
+row.names(v15a)
+```
 
     ##  [1] "Duster 360"          "Merc 280C"           "Merc 450SE"         
     ##  [4] "Merc 450SL"          "Merc 450SLC"         "Cadillac Fleetwood" 
@@ -464,7 +537,9 @@ combustible.
 
 **b.** Autos que tengan 4 cilindros.
 
-    mtcars[(mtcars$cyl == 4),]
+``` r
+mtcars[(mtcars$cyl == 4),]
+```
 
     ##                 mpg cyl  disp  hp drat    wt  qsec vs am gear carb
     ## Datsun 710     22.8   4 108.0  93 3.85 2.320 18.61  1  1    4    1
@@ -479,8 +554,10 @@ combustible.
     ## Lotus Europa   30.4   4  95.1 113 3.77 1.513 16.90  1  1    5    2
     ## Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.60  1  1    4    2
 
-    v15b=mtcars[(mtcars$cyl == 4),]
-    row.names(v15b)
+``` r
+v15b=mtcars[(mtcars$cyl == 4),]
+row.names(v15b)
+```
 
     ##  [1] "Datsun 710"     "Merc 240D"      "Merc 230"       "Fiat 128"      
     ##  [5] "Honda Civic"    "Toyota Corolla" "Toyota Corona"  "Fiat X1-9"     
@@ -488,7 +565,9 @@ combustible.
 
 **c.** Autos que pesen más de 2500 libras y tengan transmisión manual
 
-    mtcars[(mtcars$wt>2.500 & mtcars$am==1),]
+``` r
+mtcars[(mtcars$wt>2.500 & mtcars$am==1),]
+```
 
     ##                 mpg cyl disp  hp drat    wt  qsec vs am gear carb
     ## Mazda RX4      21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
@@ -498,8 +577,10 @@ combustible.
     ## Maserati Bora  15.0   8  301 335 3.54 3.570 14.60  0  1    5    8
     ## Volvo 142E     21.4   4  121 109 4.11 2.780 18.60  1  1    4    2
 
-    v15c=mtcars[(mtcars$wt>2.500 & mtcars$am==1),]
-    row.names(v15c)
+``` r
+v15c=mtcars[(mtcars$wt>2.500 & mtcars$am==1),]
+row.names(v15c)
+```
 
     ## [1] "Mazda RX4"      "Mazda RX4 Wag"  "Ford Pantera L" "Ferrari Dino"  
     ## [5] "Maserati Bora"  "Volvo 142E"
@@ -510,18 +591,20 @@ forma analítica de esta ecuación se muestra a continuación (Usar x como
 un rango de 0 a 365). Replicar el gráfico
 <http://pbarbier.com/eqtime/eqtime.html>
 
-    x=c(0:365)
+``` r
+x=c(0:365)
 
-    y=c(2*pi*(x-81)/365)
+y=c(2*pi*(x-81)/365)
 
-    fy=c(9.87*sin(2*y)-7.53*cos(y)-1.5*sin(y))
+fy=c(9.87*sin(2*y)-7.53*cos(y)-1.5*sin(y))
 
-    plot(fy, type="l",lty="33",lwd="2", axes=TRUE, las=1, pch=20, yaxp=c(-12,18,5),xaxp = c(0, 365, 12),xaxt="n", xlab="", ylab="Minutos", col="red", font=2)
-    title(main="Ecuación del tiempo
-    Mathematical Astronomy Morsels, Jean Meeus. 1997", adj=0, line=0.5, cex.main=1)
-    title(sub="Realizado por GRUPO 13", adj=1, line = 2.5, cex.sub=0.8)
+plot(fy, type="l",lty="33",lwd="2", axes=TRUE, las=1, pch=20, yaxp=c(-12,18,5),xaxp = c(0, 365, 12),xaxt="n", xlab="", ylab="Minutos", col="red", font=2)
+title(main="Ecuación del tiempo
+Mathematical Astronomy Morsels, Jean Meeus. 1997", adj=0, line=0.5, cex.main=1)
+title(sub="Realizado por GRUPO 13", adj=1, line = 2.5, cex.sub=0.8)
 
-    axis(1, at = seq(0, 365, by=30.4),
-         labels = c("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre","Enero"), cex.axis=0.4)
+axis(1, at = seq(0, 365, by=30.4),
+     labels = c("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre","Enero"), cex.axis=0.4)
+```
 
-![](Tarea-2---Grupo-13_files/figure-markdown_strict/unnamed-chunk-33-1.png)
+![](Tarea-2---Grupo-13_files/figure-gfm/unnamed-chunk-33-1.png)<!-- -->

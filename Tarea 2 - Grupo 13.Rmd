@@ -1,12 +1,15 @@
 ---
 title: "Tarea 2"
-output: html_document
+output: github_document
 ---
 # **TAREA 2**
-Integrantes
+
+**Integrantes**
 
 - BARRRENECHEA BENITES, Marycielo Corazon
+
 - BECERRA ZEVALLOS, Cesar Gerardo
+
 - MUÑOZ RIMACHI, Camilo Patricio
 
 ```{r setup, include=FALSE}

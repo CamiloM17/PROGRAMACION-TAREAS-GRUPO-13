@@ -1,12 +1,17 @@
 ---
 title: "Tarea 1"
-output: html_document
+output: github_document
 ---
 # **TAREA 1**
-Integrantes**
+
+**Integrantes**
+
 - BARRRENECHEA BENITES, Marycielo Corazon
+
 - BECERRA ZEVALLOS, Cesar Gerardo
+
 - MUÑOZ RIMACHI, Camilo Patricio
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_chunk$set(error = TRUE)
